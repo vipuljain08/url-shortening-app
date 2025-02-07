@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <a href="/" aria-label="Shortly logo" className={className}>
+    <Link href="/" aria-label="Shortly logo" className={className}>
       <Image
         src="/logo.svg"
         alt="Shortly"
@@ -10,7 +11,7 @@ const Logo = ({ className }: { className?: string }) => {
         height={33}
         className="mx-auto"
       />
-    </a>
+    </Link>
   );
 };
 export default Logo;
