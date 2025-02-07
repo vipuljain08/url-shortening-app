@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+}
+h1,
+h2,
+h3 {
+  @apply font-bold text-very-dark-violet;
+}
+p {
+  @apply text-grayish-violet;
+}
+
+@layer components {
+  .custom-filter {
+    filter: invert(77%) sepia(86%) saturate(527%) hue-rotate(133deg)
+      brightness(200%) contrast(150%);
+  }
 }
